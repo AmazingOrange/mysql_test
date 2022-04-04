@@ -1,0 +1,362 @@
+@font-face {
+  font-family: 'comfortaaregular';
+  src: url('/fonts/comfortaa-variablefont_wght-webfont.eot');
+  src: url('/fonts/comfortaa-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/comfortaa-variablefont_wght-webfont.woff2') format('woff2'),
+       url('/fonts/comfortaa-variablefont_wght-webfont.woff') format('woff'),
+       url('/fonts/comfortaa-variablefont_wght-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+font-family: "comfortaaregular";
+font-size: 14pt;
+margin: 0px;
+padding: 0px;
+height: 100vh;
+display: grid;
+grid-gap: 1em;
+grid-template-columns: repeat(5, vw100);
+grid-template-rows: repeat(5, vh100);
+align-items: end;
+background: url("/img/banner.jpg") center/cover fixed;
+}
+
+#errorMsg {
+color: red;
+}
+
+#formPanel {
+background-color: blue;
+grid-row: 2 / span 1;
+grid-column: 3 / span 1;
+padding-left: 2em;
+padding-right: 2em;
+background-color: rgba(0,0,0,0.48);
+box-shadow: 0 0 25px rgba(0,0,0,0.1), 0 5px 10px -3px rgba(0,0,0,0.13);
+border-radius: 1em;
+backdrop-filter: blur(6px);
+}
+
+
+footer {
+background-color: green;
+grid-row: 5 / 5;
+grid-column: 1 / span 5;
+background-color: black;
+color: white;
+text-align: center;
+padding: 1em;
+/*        filter: blur(0.6px);*/
+}
+
+footer #left {
+float: left;
+
+}
+
+footer #right {
+float: right;
+text-align: right;
+font-size: 0.75em;
+}
+
+#loginForm {
+color: white;
+text-align: center;
+}
+
+#loginForm a {
+color: #fd7e14;
+}
+
+#loginForm > input {
+font-size: 1.1em;
+display: block;
+margin: 0 auto;
+margin-top: 1em;
+outline: none;
+border: none;
+text-align: center;
+color: #212121;
+padding: 0.4em;
+background-color: rgba(255,255,255,0.7);
+border-radius: 6px;
+}
+
+
+#loginForm > input[type="button"] {
+background-color: transparent;
+border: 3px solid #f2f2f8;
+color: #f2f2f8;
+transform: translate3D(0, 0, 0);
+transition: color 0.3s, background-color 0.3s, transform 0.15s;
+cursor: pointer;
+}
+#loginForm > input[type="button"]:hover {
+color: #212121;
+background-color: #f2f2f8;
+outline: none;
+}
+#loginForm > input[type="button"]:focus {
+outline: none;
+}
+#loginForm > input[type="button"]:active {
+transform: translate3D(0, 5px, 0);
+outline: none;
+}
+
+#loginForm > p {
+margin: 1em;
+}
+
+#loginForm > p > span {
+text-align: center;
+font-size: 1.1em;
+color: red;
+display: none;
+}
+
+a {
+color: #e83e8c;
+}
+
+/* * .center {
+  text-align: center;
+  display: inline-block;
+}
+
+* .left {
+  text-align: left;
+}
+
+
+
+
+body {
+  background-color: lightslategray;
+  font-size: 1.2vw;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+}
+
+img {
+  width: 32%;
+  height: 100%;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #0082e6;
+  font-size: 1.6vw;
+}
+
+label.logo{
+  color: white;
+  font-size: 3vw;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  display:inline;
+  justify-content: space-between;
+}
+
+nav li {
+  display:inline;
+  flex: auto;
+}
+
+
+content {
+  grid-area: content;
+  background-color: darkgrey;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
+}
+
+ul li {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+
+
+#content {
+  grid-area: content;
+  background-color: rgb(182, 27, 169);
+}
+
+
+
+#context {
+  grid-area: context;
+  background-color: yellow;
+}
+
+#context1 {
+  grid-area: context1;
+  background-color: goldenrod;
+}
+
+#context2 {
+  color: black;
+  grid-area: context2;
+  background-color:lightgreen;
+}
+
+footer {
+  grid-area: footer;
+  background-color: cyan;
+}
+
+
+
+
+@media (min-width: 1px) {
+  body {
+    font-size: 1rem;
+    min-height: 30vh;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+      "nav nav"
+      "nav nav"
+      "content content"
+      "context context"
+      "context1 context1"
+      "context1 context1"
+      "context2 context2"
+      "context2 context2"
+      "footer footer"
+  }
+
+  nav {
+    font-size: 1.9vw;
+  }
+
+  label.logo{
+    color: white;
+    font-size: 2vw;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  ul li {
+    margin-bottom: 2%;
+    display: inline;
+    float: center;
+    clear: center;
+    align-items: center;
+    align-content: center;
+    font-size: 1.2em;
+  }
+}
+
+
+
+
+@media (min-width: 701px) {
+  body {
+    min-height: 50vh;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+      "nav nav nav nav nav nav nav nav"
+      "content content content content content content content content"
+      "context context context context context context context context"
+      "context1 context1 context1 context1 context2 context2 context2 context2"
+      "footer footer footer footer footer footer footer footer"
+  }
+
+  
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  ul {
+    list-style-type: none;
+    margin: 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  ul li {
+    margin-bottom: 2%;
+    display: inline;
+    font-size: 3.2vw;
+    float: center;
+    clear: center;
+    align-items: center;
+    align-content: center;
+  }
+
+
+
+}
+
+@media (min-width: 1281px) {
+  body {
+    grid:
+      "nav nav nav nav nav"
+      "content content content content contet"
+      "content content content content content"
+      "context1 context1 context1 context2 context2"
+      "context1 context1 context1 context2 context2"
+      "footer footer footer footer footer"
+  }
+
+  nav {
+    color:white;
+    background-color: #0082e6;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  ul li {
+    margin-bottom: 2%;
+    display: flex;
+    float: center;
+    clear: center;
+    align-items: center;
+    align-content: center;
+  }
+
+
+} */

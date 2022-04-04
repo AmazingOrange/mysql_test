@@ -1,0 +1,26 @@
+{
+  "name": "jisangwoocomp1537assignment3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assignment4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmazingOrange/CSS_Responsive_Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmazingOrange/CSS_Responsive_Web/issues"
+  },
+  "homepage": "https://github.com/AmazingOrange/CSS_Responsive_Web#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "jsdom": "^19.0.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  }
+}
